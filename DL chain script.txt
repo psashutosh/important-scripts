@@ -1,0 +1,7 @@
+1. Place required VSPA and E200 binaries in firmware.
+2. Reboot the board.
+3. Create DPNI and load yami on RU.
+4. Create DPNI on DU as well.
+5. Execute FH-APP on both RU and DU.
+6. Then connect RF ant port to VSA.
+7. Do required settings on VSA to see constellations and spectrum.

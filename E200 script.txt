@@ -1,0 +1,7 @@
+sudo update-binfmts --install i386 /usr/bin/qemu-i386-static --magic '\x7fELF\x01\x01\x01\x03\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x03\x00\x01\x00\x00\x00' --mask '\xff\xff\xff\xff\xff\xff\xff\xfc\xff\xff\xff\xff\xff\xff\xff\xff\xf8\xff\xff\xff\xff\xff\xff\xff'
+
+COMMON_HEADERS_DIR=/home/psashutosh/Ashutosh/Flexbuild/flexbuild_la12xx_sdk2.2_ext/packages/apps/networking/geul_common_headers
+export E200GCC_DIR=/home/psashutosh/Ashutosh/power-pc/gcc-4.9.4-Ee200-eabivle/i686-linux
+export PATH=$PATH:$E200GCC_DIR/bin
+./clean.sh
+./build.sh -t la1224 -l info -b release -m pci

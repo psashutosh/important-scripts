@@ -1,0 +1,9 @@
+sudo apt-get install make cmake
+
+
+sudo apt install qemu-user-static 
+
+ sudo service binfmt-support start
+=> sudo apt-get update
+=> sudo apt install libc6.i686
+=> sudo apt install lib32z1

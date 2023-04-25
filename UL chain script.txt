@@ -1,0 +1,15 @@
+## UL chain Steps:
+
+ 
+
+1. At first , do required configurations on R&S VSA.
+For ex - In FRC cfg, Set A-15 test vector [QPSK] and also configure trigger settings.
+2. Connect VSG to Ant port of RF - RU.
+3. Place required VSPA & E200 in firmware.
+4. Create DPNI & Load yami
+5. Also create DPNI on DU - simulator.
+6. Execute FH - APP on BOTH RU & DU.
+7. And by pressing 4 you can capture UL dump on DU.
+8. Then using octave plot, plot the dump and see whether it has data or not.
+9. After verifying that octave plot has data or not, convert bin file into csv.
+10. Then load required settings file on KS-VSA and then play that csv file.

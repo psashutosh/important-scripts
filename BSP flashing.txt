@@ -1,0 +1,12 @@
+$$$ BSP Flashing
+
+ 
+
+flex-installer -i pf -d /dev/mmcblk0
+cp /media/bootpartition_LS_arm64_lts_4.19.tgz /mnt/mmcblk0p3
+cp /media/rootfs_lsdk2004_ubuntu_main_arm64.tgz /mnt/mmcblk0p3
+cp /media/firmware_la1224rdb_uboot_sdboot.img /mnt/mmcblk0p3
+
+ {{ flex-installer -i install -b /mnt/mmcblk0p3/bootpartition_LS_arm64_lts_4.19.tgz -r 
+/mnt/mmcblk0p3/rootfs_lsdk2004_ubuntu_main_arm64.tgz -f 
+/mnt/mmcblk0p3/firmware_la1224rdb_uboot_sdboot.img -m la1224rdb -d /dev/mmcblk0 }}

@@ -1,0 +1,52 @@
+Given :- 
+#Genvisio board DPMAC.3
+#Bonyrigg board DPMAC.5
+
+Steps for End-to End
+
+on-DU side (Genvisio board)
+---------------------------
+
+-- ls-listni :- check which dpmac port has dpni created.
+-- ifconfig :- show which eth is connected with our dpmac port.
+-- ls-addni :- add dpni port for dpmac.x
+-- set the ip-addr on the dpmac connected eth port.
+       cmd:- ifconfig eth0 <ip-addr> up.
+-- ls-listni :- check either dpni is assigned to dpmac port or not.
+       
+Now, Run the dpni script with dpmac.x port for dpni creation.
+  cmd :- . ./dpni.sh dpmac.x
+
+--ls-listni :- Now list all the dpni eth port where the dpni created for data transfer.
+    
+    ex:- dpni.3,dpni.4
+
+
+
+
+on BR board side (Bonyrigg)
+---------------------------
+
+-- ls-listni :- check which dpmac port has dpni created.
+-- ifconfig :- show which eth is connected with our dpmac port.
+-- ls-addni :- add dpni port for dpmac.x
+-- set the ip-addr on the dpmac connected eth port.
+       cmd:- ifconfig eth0 <ip-addr> up.
+-- ls-listni :- check either dpni is assigned to dpmac port or not.
+       
+Now, Run the dpni script with dpmac.x port for dpni creation.
+  cmd :- . ./dpni.sh dpmac.x
+
+--ls-listni :- Now list all the dpni eth port where the dpni created for data transfer.
+    
+    ex:- dpni.3,dpni.4
+
+
+
+Now Run the fh-app on both side for data transfer or recieve.
+
+on Genvisio board.  :- ./fh-app -c config -p 2 dpni.x dpni.y    Note:- x<y.
+-----------------
+
+on Bonyrigg board.  :- ./fh-app -c config -p 2 dpni.x dpni.y -l   Note:- x<y.
+-----------------
